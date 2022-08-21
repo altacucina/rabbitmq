@@ -8,4 +8,4 @@ RUN chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.conf
 
 USER rabbitmq:rabbitmq
 
-RUN chmod 600 /var/lib/rabbitmq/.erlang.cookie
+CMD chmod 400 /var/lib/rabbitmq/.erlang.cookie && rabbitmq-server
