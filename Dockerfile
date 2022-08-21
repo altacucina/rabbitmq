@@ -7,3 +7,5 @@ ENV RABBITMQ_NODENAME=rabbit@localhost
 RUN chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.conf
 
 USER rabbitmq:rabbitmq
+
+RUN chmod 600 /var/lib/rabbitmq/.erlang.cookie
